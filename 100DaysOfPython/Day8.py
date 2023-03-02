@@ -1,0 +1,53 @@
+print("**** Your daily motivation ****")
+print()
+name = input("What is your name?. ")
+print()
+print("Hi", name)
+print()
+day = input("What's day of the week?. ")
+print()
+if (day == "monday" or day == "Monday"):
+    print(name, ",'I’m alive, motivated and ready to slay the day #MONSLAY.' —Unknown")
+    print()
+    print("Thank you", name, "for trying my daily motivator.")
+    print()
+elif (day == "tuesday" or day == "Tuesday"):
+    print(name, ",'All our dreams can come true, if we have the courage to pursue them.' —Walt Disney")
+    print()
+    print("Thank you", name, "for trying my daily motivator.")
+    print()
+elif (day == "wednesday" or day == "Wednesday"):
+    print(name, ",'The secret of getting ahead is getting started.' —Mark Twain")
+    print()
+    print("Thank you", name, "for trying my daily motivator.")
+    print()
+elif (day == "wednesday" or day == "Wednesday"):
+    print(name, ",'Do one thing every day that scares you.' ―Eleanor Roosevelt")
+    print()
+    print("Thank you", name, "for trying my daily motivator.")
+    print()
+elif (day == "thursday" or day == "Thursday"):
+    print(name, ",'Impossible is just an opinion.' —Paulo Coelho")
+    print()
+    print("Thank you", name, "for trying my daily motivator.")
+    print()
+elif (day == "friday" or day == "Friday"):
+    print(name, ",'Hold the vision, trust the process.' —Unknown")
+    print()
+    print("Thank you", name, "for trying my daily motivator.")
+    print()
+elif (day == "saturday" or day == "Saturday"):
+    print(name, ",'Some people want it to happen, some wish it would happen, others make it happen.' ―Michael Jordan")
+    print()
+    print("Thank you", name, "for trying my daily motivator.")
+    print()
+elif (day == "sunday" or day == "Sunday"):
+    print(name, ",'Work hard in silence, let your success be the noise.' ―Frank Ocean")
+    print()
+    print("Thank you", name, "for trying my daily motivator.")
+    print()
+else:
+    print("Why you no follow directions. 😒. ")
+print()
+print("Quotes provided by www.oberlo.com.")
+print()
