@@ -18,5 +18,5 @@ if (friend == "yes"):
 else:
     print("He who remains, says 🤙🏽")
 print()
-print("Thank youu for trying my simple if/else coding experience.")
+print("Thank you for trying my simple if/else coding experience.")
 print()

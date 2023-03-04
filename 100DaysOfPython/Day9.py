@@ -20,3 +20,4 @@ elif (year >= 2013 and year <= 2025):
     print(name, ", you're a", "\033[34m", "Generation ALPHA.", "\033[0m")
 print()
 print("Thank you for trying my Generation Generator")
+print()
