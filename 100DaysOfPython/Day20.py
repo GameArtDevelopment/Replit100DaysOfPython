@@ -1,0 +1,25 @@
+print("\033[34m")
+print("        ********************************       ")
+print("        *                              *       ")
+print("\033[0m,\033[31m       *      A LIST GENERATOR        *\033[0m       ")
+print("\033[34m        *                              *       ")
+print("        ********************************       ")
+print("\033[0m")
+print()
+startNum = int(input("Starting number: "))
+endNum = int(input("Ending number: "))
+increment = int(input("Increment: "))
+print()
+print("Starting at: ", startNum)
+print("Ending before: ", endNum)
+print("Incrementing between values: ", increment)
+print()
+for i in range(startNum, endNum, increment):
+    if i % 2 == 0:
+        print("These are your results: ", "\033[33m", i, "\033[0m")
+    else:
+        print("These are your results: ", "\033[32m", i, "\033[0m")
+
+print()
+print("Thank you for trying my Day 20 Challenge.")
+print()
