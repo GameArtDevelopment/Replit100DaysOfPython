@@ -1,11 +1,10 @@
 import random
-
 print("\033[31m", "    ****GUESS A RANDOM NUMBER****", "\033[0m")
 print()
-number = random.randint(1, 1000000)
+number = random.randint(1, 1000)
 numberGuess = 0
 counter = 0
-print("Guess a number between 1 - 1,000,000.")
+print("Guess a number between 1 - 1,000")
 print()
 while True:
     if numberGuess == number:
@@ -22,7 +21,7 @@ while True:
         counter += 1
         print()
         continue
-    elif numberGuess > number and numberGuess <= 1000000:
+    elif numberGuess > number and numberGuess <= 1000:
         print("Lower")
         counter += 1
         print()
@@ -30,7 +29,7 @@ while True:
     elif numberGuess < 0:
         exit("You need to stay positive.")
         print()
-    elif numberGuess > 1000000:
+    elif numberGuess > 1000:
         print("Not sure why you entered that. Please try again.")
         counter += 1
         print()
