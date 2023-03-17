@@ -11,8 +11,13 @@ def rollDice(sides):
     print()
 
 
+def rollAnotherDice(sides):
+    print("You rolled ", "\033[32m", random.randint(1, sides), "\033[0m")
+
+
 while play == "yes":
     rollDice(sides)
+    rollAnotherDice(sides)
     play = input("Do you want to roll again? ")
 
 print()
