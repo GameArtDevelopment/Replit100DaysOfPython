@@ -1,22 +1,30 @@
-print("\033[44m""*** Marvel Movie Character Questions ***""\033[0m")
+print("**** \033[44m MARVEL MOVIE CHARACTER QUESTIONS \033[0m ****")
 print()
-print("This is a short marvel character questionnaire. I hope you enjoy.")
+print("This is a short Marvel Character questionaire, I hope you enjoy it!")
 print()
-skill = input("Do you like to read minds?. yes or no? ")
+skill = input("Do you like to read minds? yes or no: ")
 print()
-print("So,", skill, ", on reading minds. Got it")
+print("So,", skill, "you like to read minds, got it!")
 print()
 if (skill == "yes"):
-    print("Hello, Professor X")
+    print("You are a telepath, like Professor X!")
 else:
-    print("DC, all the way!!")
+    print("DC, all the way!")
+
 print()
-friend = input("Is Wolverine a friend?. yes or no? ")
+friend = input("Is Wolverine your best friend? yes or no: ")
 if (friend == "yes"):
+    print("You are a mutant, like Wolverine!")
+    print("The rest of the X-Men solute you!")
     print()
-    print("Wolverine and the rest the X-Men solute you.")
+
 else:
-    print("He who remains, says 🤙🏽")
+    print("You are a human, like Captain America!")
+    print("The rest of the Avengers solute you!")
+    print()
+
 print()
-print("Thank you for trying my simple if/else coding experience.")
+
+print("Thank you for trying my simple if/else statement!")
+print("I hope you enjoyed it!")
 print()
