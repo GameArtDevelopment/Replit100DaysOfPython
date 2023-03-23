@@ -1,22 +1,29 @@
-print("\033[4m""**** SECURE LOGIN ****""\033[0m")
+print("\033[31m****** SECURE LOGIN ******\033[0m")
 print()
-name = input("What's you name? ")
+name = input("Enter your name: ")
 print()
-print("Hi " + name, ", please enter your username and password.")
+print("Hello, " + name + "!")
 print()
-username = input("username: ")
+print("Please enter your username and password to continue.")
 print()
-password = input("password: ")
+username = input("Username: ")
+print()
+password = input("Password: ")
 print()
 if username == "Steven" and password == "Rogers":
-    print("\033[31m", "I can do this all day!", "\033[0m")
+    print("\033[31mAccess Granted, You can do this all day!\033[0m")
 elif username == "Peter" and password == "Parker":
-    print("\033[36m""With great power comes great responsibility!""\033[0m")
+    print(
+        "\033[36mAccess Granted, With great power comes great responsibility!\033[0m")
 elif username == "Tony" and password == "Stark":
-    print("\033[33m""I am Iron man!""\033[0m")
+    print("\033[33mAccess Granted! You are Iron Man!\033[0m")
 else:
-    print("You entered the wrong information.")
+    print("-------------------------------------------------")
+    print("\033[31mAccess Denied, You are not worthy!\033[0m")
+
 print()
-print("Thank you for trying my login program. I hope you enjoyed it.")
-print("ANSWER: usernames are -> Steven, Peter, Tony and passwords are -> Rogers, Parker, Stark. Remember, capital letters matter.")
+print("Thank you for using the Secure Login System, " + name + "!")
+print()
+print("ANSWER: usernames are -> ", "\033[32m", "Steven, Peter, Tony", "\033[0m", "and asswords are -> ",
+      "\033[34m", "Rogers, Parker, Stark.", "\033[0m", "Remember, capital letters matter.")
 print()
