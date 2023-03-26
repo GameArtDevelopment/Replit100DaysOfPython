@@ -1,23 +1,53 @@
-print("*****""\033[31m", "Generation Generator", "\033[0m""*****")
+print("=================================")
+print("**    GENERATION GENERATOR     **")
+print("=================================")
 print()
-name = input("What's you name?. ")
+name = input("What is your name? ")
 print()
-print("Hi,", name, ",let's find out what generation you are.")
+print("Hello", name, "!")
 print()
-year = int(input("What year were you born?. "))
+print("Hi", name, "I'm a generation generator. I can tell you what generation you are.")
+print()
+year = int(input("What year were you born? "))
 print()
 if (year <= 1945 and year >= 1925):
-    print(name, ", you're a", "\033[35m", "Traditionalist.", "\033[0m")
-elif (year >= 1946 and year <= 1964):
-    print(name, ", you're a", "\033[36m", "Baby Boomer.", "\033[0m")
-elif (year >= 1965 and year <= 1979):
-    print(name, ", you're a", "\033[33m", "Generation X.", "\033[0m")
-elif (year >= 1980 and year <= 1994):
-    print(name, ", you're a", "\033[30m", "Millenial.", "\033[0m")
-elif (year >= 1995 and year <= 2012):
-    print(name, ", you're a", "\033[32m", "Generation Z.", "\033[0m")
-elif (year >= 2013 and year <= 2025):
-    print(name, ", you're a", "\033[34m", "Generation ALPHA.", "\033[0m")
+    print(name, ", you're a Traditionalist.")
+    print()
+    print("Thank you", name, "for trying my generation generator.")
+    print()
+elif (year <= 1964 and year >= 1946):
+    print(name, ", you're a Baby Boomer.")
+    print()
+    print("Thank you", name, "for trying my generation generator.")
+    print()
+elif (year <= 1980 and year >= 1965):
+    print(name, ", you're a Generation X.")
+    print()
+    print("Thank you", name, "for trying my generation generator.")
+    print()
+elif (year <= 1996 and year >= 1981):
+    print(name, ", you're a Millenial.")
+    print()
+    print("Thank you", name, "for trying my generation generator.")
+    print()
+elif (year <= 2012 and year >= 1997):
+    print(name, ", you're a Generation Z.")
+    print()
+    print("Thank you", name, "for trying my generation generator.")
+    print()
+elif (year <= 2025 and year >= 2013):
+    print(name, ", you're a Generation Alpha.")
+    print()
+    print("Thank you", name, "for trying my generation generator.")
+    print()
+else:
+    print("Sorry, I don't know what generation you are.")
+    print()
+    print("Thank you", name, "for trying my generation generator.")
+    print()
+
+print("=================================")
+print("**    GENERATION GENERATOR     **")
+print("=================================")
 print()
-print("Thank you for trying my Generation Generator")
-print()
+print("Thank you for trying my generation generator.")
