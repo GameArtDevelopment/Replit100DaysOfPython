@@ -35,3 +35,4 @@ else:
     print("Not a valid answer. Please try again.")
     print()
 print("Thanks for playing,", name)
+print("Part of the 5 mini projects from YouTube sensation -> Tech With Tim")
