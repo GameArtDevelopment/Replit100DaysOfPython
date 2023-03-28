@@ -24,3 +24,4 @@ amount = 10
 for i in range(amount):
     password = "".join(random.sample(all, length))
     print(password)
+print("I don't remember where I got this code from. Once I find out, I will give credit to the author.")
