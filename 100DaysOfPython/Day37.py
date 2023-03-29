@@ -1,0 +1,18 @@
+print()
+print("\033[35m============================================\033[0m")
+print("* \033[33m\033[1mWelcome to the Star Wars Name Generator!\033[0m *")
+print("\033[35m============================================\033[0m")
+fullName = input("Please enter your full name: ")
+print()
+firstName, lastName = fullName.split()
+print()
+starWarsFirstName = (firstName[:3] + lastName[:3]).title()
+mothersMaidenName, birthCity = input(
+    "Please enter your mother's maiden name and a city with a single word (Qatar) separated by a space.: ").split()
+print()
+starWarsLastName = (mothersMaidenName[:2] + birthCity[-3:]).title()
+print(
+    f"Your Star Wars name is \033[33m{starWarsFirstName} {starWarsLastName}\033[0m.\n May the Force be with you!")
+print()
+print("\033[34mThanks for using the Star Wars Name Generator!\033[0m")
+print()
