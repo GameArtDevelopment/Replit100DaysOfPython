@@ -14,10 +14,12 @@ def countdown(t):
         print(timer, end="\r")  # printing the timer
         time.sleep(1)  # pausing the code for 1 second
         t -= 1  # decrementing t by 1
-
+    print()
     print("Pomodoro Complete!")  # printing the message when t is 0
+    print()
 
 
+print()
 t = input("Enter how many minutes: ")  # taking input from user
 
 # choices make t into 10minutes, 20minutes, 30minutes, 40minutes, 50minutes, 60minutes
