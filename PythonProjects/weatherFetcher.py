@@ -1,7 +1,6 @@
-import requests
+import requests  # pip3 install requests
 # OpenWeather API Key
-API_KEY = "949d1u22cbffbrarjh182eig55"  # this API does not work.
-# in terminal ia entered pip3 install requests
+API_KEY = "949d1u22cbffbrarjh182eig55"  # this API does not work. You need to get your own API key from OpenWeather
 BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
 
 city = input("Enter city name: ")
