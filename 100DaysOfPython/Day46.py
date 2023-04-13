@@ -76,6 +76,7 @@ def editPrezBeast():
     if key not in prezdex:
         print("Invalid key.")
         input("Press Enter to continue.")
+        os.system('clear')
         return
 
     value = input(f"Enter the new value for {key}: ").strip().title()
