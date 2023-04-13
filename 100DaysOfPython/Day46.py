@@ -15,6 +15,8 @@ typeColor = {
 def addPrezBeast():
     os.system("clear")
     print("Add PrezBeast\n")
+    print("Types: Earth, Wind, Fire, Water, Heart")
+    print()
     prezdex = {
         "Beast Name": "",
         "Type": "",
@@ -65,7 +67,7 @@ def editPrezBeast():
         print("Invalid PrezBeast number.")
         input("Press Enter to continue.")
         return
-
+    os.system("clear")
     prezdex = prezbeasts[beastNum - 1]
     print(f"\nPrezBeast {beastNum}")
     for key, value in prezdex.items():
@@ -76,7 +78,6 @@ def editPrezBeast():
     if key not in prezdex:
         print("Invalid key.")
         input("Press Enter to continue.")
-        os.system('clear')
         return
 
     value = input(f"Enter the new value for {key}: ").strip().title()
@@ -126,6 +127,7 @@ def viewPrezBeast():
                 print(f"{key}: {prezdex[key]}")
 
     input("\nPress Enter to continue.")
+    os.system("clear")
 
 
 def removePrezBeast():
@@ -153,6 +155,7 @@ def removePrezBeast():
         return
     del prezbeasts[beastNum - 1]
     input("\nPrezBeast removed. Press Enter to continue.")
+    os.system("clear")
 
 
 def main():
