@@ -1,6 +1,6 @@
 print("****Chose Your Own Adventure****")
 print()
-name = input("What is your name? ")
+name = input("What is your name? ").capitalize()
 print()
 print("Welcome", name, "to the adventure!")
 print()
