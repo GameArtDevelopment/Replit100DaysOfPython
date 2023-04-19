@@ -1,18 +1,19 @@
 import os
 import time
-import pickle
 
 toDoList = []
 
 # Check if a saved to-do list exists and load it
-if os.path.exists("toDoList.pickle"):
-    with open("toDoList.pickle", "rb") as f:
-        toDoList = pickle.load(f)
+if os.path.exists("toDoList.txt"):
+    with open("toDoList.txt", "r") as f:
+        file_contents = f.read()
+        if file_contents:
+            toDoList = eval(file_contents)
 
 while True:
     print()
     print("\033[33m        Welcome to your to do list!\033[0m")
-    print("-------------------------------------------")
+    print("\033[32m-----------------------------------------------\033[0m")
     print("\nMENU")
     print("1. Add")
     print("2. View")
@@ -32,8 +33,8 @@ while True:
         print("To do added successfully!")
 
         # Save the updated to-do list
-        with open("toDoList.pickle", "wb") as f:
-            pickle.dump(toDoList, f)
+        with open("toDoList.txt", "w") as f:
+            f.write(str(toDoList))
 
     elif choice == '2':
         os.system('clear')
@@ -65,10 +66,13 @@ while True:
             os.system('clear')
             print("\033[33mYour to dos:\033[0m")
             print("------------")
-            for index, task in enumerate(toDoList):
+            index = 0
+            for task in toDoList:
+                index += 1
                 print(
-                    f"{index+1}. Task: {task['task']} | Due Date: {task['dueDate']} | Priority: {task['priority']}")
-                print("-----------------------------------------------")
+                    f"{index}. Task: {task['task']} | Due Date: {task['dueDate']} | Priority: {task['priority']}")
+                print(
+                    "\033[35m-----------------------------------------------\033[0m")
 
         elif viewChoice == '2':
             os.system('clear')
@@ -90,87 +94,118 @@ while True:
             print("\033[36mLoading....\033[0m")
             time.sleep(.5)
             os.system('clear')
-
+            print("\033[35mLoading.....\033[0m")
+            time.sleep(.5)
+            os.system('clear')
             print("\033[33mYour to dos:\033[0m")
             print("------------")
-            for index, task in enumerate(matchingTasks):
+            index = 0
+            for task in toDoList:
+                index += 1
                 print(
-                    f"{index+1}. Task: {task['task']} | Due Date: {task['dueDate']} | Priority: {task['priority']}")
-                print("-----------------------------------------------")
+                    f"{index}. Task: {task['task']} | Due Date: {task['dueDate']} | Priority: {task['priority']}")
+                print(
+                    "\033[35m-----------------------------------------------\033[0m")
 
     elif choice == '3':
         os.system('clear')
-        print("Which to do would you like to edit?")
-        for index, task in enumerate(toDoList):
-            print(
-                f"{index+1}. Task: {task['task']} | Due Date: {task['dueDate']} | Priority: {task['priority']}")
-            print("-----------------------------------------------")
+        print("Would you like to edit a task or due date?")
+        print("1. Edit task")
+        print("2. Edit due date")
 
-        editChoice = int(
-            input("Enter the number of the to do you want to edit: "))
-        os.system('clear')
-        print("Which part of the to do would you like to edit?")
-        print("1. Task")
-        print("2. Due Date")
-        print("3. Priority")
+        editChoice = input("Enter your choice (1-2): ")
 
-        editChoice2 = int(input("Enter your choice (1-3): "))
-
-        if editChoice2 == 1:
+        if editChoice == '1':
             os.system('clear')
-            new_task = input("Enter the new task: ")
-            toDoList[editChoice-1]['task'] = new_task
-            print("To do edited successfully!")
+            print("\033[33mYour updated to do list:\033[0m")
+            print("------------")
+            index = 0
+            for task in toDoList:
+                index += 1
+                print(
+                    f"{index}. Task: {task['task']} | Due Date: {task['dueDate']} | Priority: {task['priority']}")
+                print(
+                    "\033[35m-----------------------------------------------\033[0m")
 
-        elif editChoice2 == 2:
+            taskNumber = int(
+                input("Enter the number of the task you want to edit: "))
+            newTask = input("Enter the new task: ")
+            toDoList[taskNumber-1]['task'] = newTask
+            print("Task edited successfully!")
+
+            # Save the updated to-do list
+            with open("toDoList.txt", "w") as f:
+                f.write(str(toDoList))
+
+        elif editChoice == '2':
             os.system('clear')
-            new_dueDate = input(
-                "Enter the new due date (MM-DD-YYYY format): ")
-            toDoList[editChoice-1]['dueDate'] = new_dueDate
-            print("To do edited successfully!")
+            print("\033[33mYour updated to do list:\033[0m")
+            print("------------")
+            index = 0
+            for task in toDoList:
+                index += 1
+                print(
+                    f"{index}. Task: {task['task']} | Due Date: {task['dueDate']} | Priority: {task['priority']}")
+                print(
+                    "\033[34m-----------------------------------------------\033[0m")
+            taskNumber = int(
+                input("Enter the number of the task you want to edit: "))
+            newDueDate = input("Enter the new due date: ")
+            toDoList[taskNumber-1]['dueDate'] = newDueDate
+            print("Due date edited successfully!")
 
-        elif editChoice2 == 3:
-            os.system('clear')
-            newPriority = input(
-                "Enter the new priority (high, medium, low): ")
-            toDoList[editChoice-1]['priority'] = newPriority
-            print("To do edited successfully!")
-
-        # Save the updated to-do list
-        with open("toDoList.pickle", "wb") as f:
-            pickle.dump(toDoList, f)
+            # Save the updated to-do list
+            with open("toDoList.txt", "w") as f:
+                f.write(str(toDoList))
 
     elif choice == '4':
         os.system('clear')
-        print("Which to do would you like to remove?")
-        for index, task in enumerate(toDoList):
+        print("\033[33mYour updated to do list:\033[0m")
+        print("------------")
+        index = 0
+        for task in toDoList:
+            index += 1
             print(
-                f"{index+1}. Task: {task['task']} | Due Date: {task['dueDate']} | Priority: {task['priority']}")
-            print("-----------------------------------------------")
-
-        removeChoice = int(
-            input("Enter the number of the to do you want to remove: "))
-        toDoList.pop(removeChoice-1)
-        print("To do removed successfully!")
+                f"{index}. Task: {task['task']} | Due Date: {task['dueDate']} | Priority: {task['priority']}")
+            print(
+                "\033[36m-----------------------------------------------\033[0m")
+        taskNumber = int(
+            input("Enter the number of the task you want to remove: "))
+        toDoList.pop(taskNumber-1)
+        print("Task removed successfully!")
 
         # Save the updated to-do list
-        with open("toDoList.pickle", "wb") as f:
-            pickle.dump(toDoList, f)
+        with open("toDoList.txt", "w") as f:
+            f.write(str(toDoList))
 
     elif choice == '5':
         os.system('clear')
-        print("Thank you for using your to do list!")
+        os.system('clear')
+        time.sleep(1)
+        print("\033[33mSaving.\033[0m")
+        time.sleep(.5)
+        os.system('clear')
+        print("\033[32mSaving..\033[0m")
+        time.sleep(.5)
+        os.system('clear')
+        print("\033[33mSaving...\033[0m")
+        time.sleep(.5)
+        os.system('clear')
+        print("\033[32mSaving....\033[0m")
+        time.sleep(.5)
+        os.system('clear')
+        print()
+        print("Your To Do List has been saved!")
+        print()
+        print("Thank you for using my to do list!")
+        print()
+        print(
+            "Follow me on twitter \033[34mhttps://twitter.com/EnjoyTh3Ride\033[0m for more projects!")
         break
 
     else:
         os.system('clear')
-        print("Invalid choice. Please try again.")
+        print("Invalid choice!")
 
-    input("Press enter to continue...")
+    input("Press Enter to continue...")
     os.system('clear')
-print()
-print("Thank you for using my to do list!")
-print()
-print(
-    "Follow me on Twitter: \033[34mhttps://twitter.com/enjoyth3ride\033[0m for more projects like this!")
-print()
