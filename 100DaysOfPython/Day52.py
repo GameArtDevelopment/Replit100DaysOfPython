@@ -151,7 +151,7 @@ def exitProgram():
     print("Thank you for using the Pizza Ordering System!")
     print()
     print(
-        "Follow me on Twitter: \033[34mhttps://twitter.com/EnjoyTh3Ride\033[0m for more Python projects!")
+        "Find me on Twitter: \033[34mhttps://twitter.com/EnjoyTh3Ride\033[0m for more Python projects!")
     time.sleep(3)
     exit()
 
