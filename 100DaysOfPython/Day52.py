@@ -180,7 +180,6 @@ def loadOrders():
 
 # load the orders from file
 loadOrders()
-
 # main function
 
 
@@ -188,16 +187,12 @@ def main():
     while True:
         # clear the screen
         clearScreen()
-
         # display the menu
         displayMenu()
-
         # get the user's choice
         choice = input("Enter your choice: ")
-
         # clear the screen
         clearScreen()
-
         # check the user's choice
         if choice == "1":
             addOrder()
