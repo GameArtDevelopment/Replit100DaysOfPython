@@ -10,6 +10,28 @@ if os.path.exists("toDoList.txt"):
         if file_contents:
             toDoList = eval(file_contents)
 
+
+def create_folder():
+    folder_name = input('Enter the folder name: ')
+    os.mkdir(folder_name)
+    print(f'Folder {folder_name} created.')
+
+
+def rename_file():
+    old_name = input('Enter the current filename: ')
+    new_name = input('Enter the new filename: ')
+    os.rename(old_name, new_name)
+    print(f'{old_name} renamed to {new_name}.')
+
+
+def list_directory():
+    directory = input('Enter the directory path: ')
+    files = os.listdir(directory)
+    print(f'Files in {directory}:')
+    for file in files:
+        print(file)
+
+
 while True:
     print()
     print("\033[33m        Welcome to your to do list!\033[0m")
@@ -109,10 +131,10 @@ while True:
 
     elif choice == '3':
         os.system('clear')
-        print("Would you like to edit a task or due date?")
+        print("Would you like to edit a task, due date, or file?")
         print("1. Edit task")
         print("2. Edit due date")
-
+        print("3. Edit file")
         editChoice = input("Enter your choice (1-2): ")
 
         if editChoice == '1':
@@ -154,6 +176,9 @@ while True:
             toDoList[taskNumber-1]['dueDate'] = newDueDate
             print("Due date edited successfully!")
 
+        elif editChoice == '3':
+            os.system('clear')
+            print("\033[33mYour updated to do list:\033[0m")
             # Save the updated to-do list
             with open("toDoList.txt", "w") as f:
                 f.write(str(toDoList))
