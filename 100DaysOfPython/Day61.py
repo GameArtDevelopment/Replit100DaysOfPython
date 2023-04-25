@@ -1,5 +1,6 @@
 import datetime
 import os
+import time
 
 tweets = {}
 
@@ -25,6 +26,7 @@ while True:
         tweets[timestamp] = tweet
 
         print("Tweet added successfully!")
+        time.sleep(1)
 
     elif choice == "2":
         # Show tweets in chronological order with pagination
