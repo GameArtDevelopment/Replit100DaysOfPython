@@ -1,7 +1,6 @@
 import random
 
-
-# ANSI color codes for formatting
+# Day 65 - Object Oriented Programming (OOP) - Inheritance
 RED = "\033[31m"
 GREEN = "\033[32m"
 YELLOW = "\033[33m"
