@@ -23,16 +23,12 @@ def add_user():
                     break
             else:
                 break
-
     password = input("Enter a password: ")
-
     # Generate a random 4-digit salt
     salt = secrets.randbelow(10000)
-
     # Append the salt to the password and hash it using sha256
     salted_password = password + str(salt)
     hashed_password = hashlib.sha256(salted_password.encode()).hexdigest()
-
     # Save the username, salt, and hashed password to a file
     with open("db.txt", "a") as f:
         f.write(username + "," + str(salt) + "," + hashed_password + "\n")
