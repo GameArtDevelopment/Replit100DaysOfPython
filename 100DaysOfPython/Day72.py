@@ -1,5 +1,4 @@
 import os
-import time
 from datetime import datetime
 import hashlib
 import binascii
@@ -243,7 +242,8 @@ def main():
         elif option == 5:
             searchEntry(diaryDB)
         elif option == 6:
-            print("Bye!")
+            print("Thank you for using my diary. Goodbye!")
+            print()
             break
         print()
 

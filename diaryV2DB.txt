@@ -1,2 +1,4 @@
-2023-05-02 22:08:17
-Swim
+2023-05-03 20:48:39
+Practice python
+2023-05-03 20:50:02
+Start 100 days of python
