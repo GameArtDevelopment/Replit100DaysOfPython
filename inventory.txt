@@ -1,4 +1,3 @@
 Sword
-Potion
 Map
 Axe

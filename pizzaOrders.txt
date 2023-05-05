@@ -1,1 +1,1 @@
-[['James', 2, 'personal', 13.98], ['Sam', 2, 'medium', 17.98]]
+[['James', 2, 'personal', 13.98], ['Sam', 2, 'medium', 17.98], ['Judy', 4, 'medium', 35.96]]

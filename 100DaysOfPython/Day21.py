@@ -1,3 +1,5 @@
+import os
+import time
 print("\033[34m")
 print("        ********************************       ")
 print("        *                              *       ")
@@ -12,17 +14,20 @@ print("This is the Multiplication Math Challenge")
 print()
 num = int(input("Enter the number you wish to be challeged on: "))
 for i in range(1, 11):
+    os.system("clear")
     ans = i * num
     print("\033[34m", i, "X", num, "=", "\033[0m")
     response = int(input("What's the answer? "))
     if (response == ans):
         print()
         print("GOOD JOB!")
+        time.sleep(1)
         print()
         counter += 1
     else:
         print()
         print("YOU MISSED THAT ONE!")
+        time.sleep(1)
         print()
 if (counter == 10):
     print()

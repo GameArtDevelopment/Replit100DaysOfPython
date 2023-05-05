@@ -37,7 +37,7 @@ while True:
         totalAttempts += game()
     elif menu == '2':
         print(
-            f"\033[36mYou've had \033[0m\033[33m{totalAttempts}\033[0m \033[36mattempts\033[0m")
+            f"\033[36mYou've had a total of \033[0m\033[33m{totalAttempts}\033[0m \033[36mattempts\033[0m")
         time.sleep(3)
     elif menu == '3':
         break

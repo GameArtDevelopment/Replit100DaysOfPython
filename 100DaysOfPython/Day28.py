@@ -26,8 +26,10 @@ def rollStrength():
     strength = ((max6 * max8) / 2) + 12
     return strength
 
-
-print("Welcome to the BATTLE ARENA!")
+print("="*30)
+print("\033[31m *** WARRIOR BATTLE ARENA ***\033[0m")
+print("="*30)
+print()
 time.sleep(1)
 print("Please enter your warrior name:")
 warrior = input()
