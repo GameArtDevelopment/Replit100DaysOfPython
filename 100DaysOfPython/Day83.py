@@ -1,8 +1,6 @@
-# I need to come back to this one. I'm not sure what I'm doing wrong.
-from flask import Flask, redirect
+from flask import Flask, redirect, request
 
 app = Flask(__name__, static_url_path="/static")
-
 
 @app.route('/')
 def index():
@@ -17,34 +15,45 @@ def hr():
 def br():
   return redirect("/bye")
 
-@app.route('/hello')
+@app.route('/hello', methods = ["GET"])
 def hello():
+    data = request.args
+    template = "okay"
+    if "template" not in data:
+        template = data["template"]
     title = "Hello World"
     date = "October 25th"
     text = "Here is my first blog entry."
     page = ""
-    f = open("template/Day77.html", "r")
+    f = open("template/Day83.html", "r")
     page = f.read()
     f.close()
     page = page.replace("{title}", title)
     page = page.replace("{date}", date)
     page = page.replace("{text}", text)
-  
+    page = page.replace("{template}", text)
     return page
 
-@app.route('/bye')
+@app.route('/bye', methods = ["GET"])
 def bye():
+    data = request.args
+    template = "okay"
+    if "template" not in data:
+        template = data["template"]
     title = "Bye World"
     date = "October 25th"
     text = "Here is my last blog entry."
     page = ""
-    f = open("template/Day77.html", "r")
+    f = open("template/Day83.html", "r")
     page = f.read()
     f.close()
     page = page.replace("{title}", title)
     page = page.replace("{date}", date)
     page = page.replace("{text}", text)
-  
+    page = page.replace("{template}", text)
     return page
-  
+
 app.run(host='0.0.0.0', port=81)
+
+
+
