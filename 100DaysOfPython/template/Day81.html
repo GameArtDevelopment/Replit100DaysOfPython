@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Verification Form</title>
+</head>
+<body>
+    <h1>Human Verification</h1>
+  
+  <form method="post" action="/robot">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="color">What is the color of the sky? (Answer in lowercase):</label>
+    <input type="text" id="color" name="color" required><br><br>
+    
+    <label for="animal">Which animal is known as the "king of the jungle"?:</label><br>
+    <input type="radio" id="lion" name="animal" value="lion" required>
+    <label for="lion">Lion</label><br>
+    
+    <input type="radio" id="elephant" name="animal" value="elephant" required>
+    <label for="elephant">Elephant</label><br>
+    
+    <input type="radio" id="tiger" name="animal" value="tiger" required>
+    <label for="tiger">Tiger</label><br><br>
+    
+    <button type="submit">I'm Human</button>
+  </form>
+</body>
+</html>
